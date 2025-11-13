@@ -2,7 +2,7 @@
 import fetch from "node-fetch";
 
 const SITE_ID = "10100"; // 👈 replace with your actual number
-const API_BASE = `https://blogs.hyvor.com/api/console/sites/${SITE_ID}/posts`;
+const API_BASE = `https://blogs.hyvor.com/api/console/sites/${10100}/posts`;
 
 
 // Post IDs (use numeric or string IDs)
