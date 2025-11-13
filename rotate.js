@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 const SITE_ID = "10100";
 
 // 👇 This is the correct API base for Hyvor Console
-const API_BASE = `https://console.hyvor.com/api/sites/${SITE_ID}/posts`;
+const API_BASE = `https://blogs.hyvor.com/api/console/v0/blog/timesofmadeira/post/{POST_ID}`;
 
 // Post IDs (from your Times of Madeira links)
 const posts = [
