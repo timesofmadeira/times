@@ -1,8 +1,8 @@
 // rotate.js
 import fetch from "node-fetch";
 
-// Hyvor Blogs API base, using the correct subdomain
-const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira/post";
+// Hyvor Blogs API base with the correct subdomain (NO /post at end)
+const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira";
 
 // Numeric post IDs (Times of Madeira)
 const posts = [
@@ -28,8 +28,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// PATCH /post/{id}
 async function patchPost(id, body, attempt = 1) {
-  const url = `${API_BASE}/${id}`;
+  const url = `${API_BASE}/post/${id}`;
   try {
     const res = await fetch(url, {
       method: "PATCH",
