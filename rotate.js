@@ -106,9 +106,7 @@ function getRandomElements(array, count) {
   return shuffled.slice(0, count);
 }
 
-// In this script, active posts are tracked outside the API, so store in file or environment if needed.
-// For simplicity assume we check all posts for featured and then unfeature them to maintain state consistency.
-
+// Unfeature all posts currently featured
 async function unfeatureAll() {
   console.log("Unfeaturing all currently featured posts...");
   await Promise.all(
@@ -119,22 +117,26 @@ async function unfeatureAll() {
 }
 
 async function main() {
-  // Activate 1 to 3 random post IDs every run (every 10 minutes ideally via cron)
-  const countToActivate = Math.floor(Math.random() * 3) + 1; // 1,2 or 3
-  
+  // Randomly activate between 1 and 3 posts on each run
+  const countToActivate = Math.floor(Math.random() * 3) + 1;
+
   try {
     // Step 1: Unfeature all posts currently featured
     await unfeatureAll();
-    
-    // Step 2: Pick random posts to feature
+    console.log("Completed unfeaturing all posts.");
+
+    // Step 2: Select random posts to feature
     const toFeature = getRandomElements(posts, countToActivate);
-    
+    console.log(`Selected ${countToActivate} posts to feature:`, toFeature.join(", "));
+
     // Step 3: Feature selected posts
     await Promise.all(
-      toFeature.map(id => patchPost(id, { is_featured: true }))
+      toFeature.map(id => patchPost(id, { is_featured: true }).catch(err => {
+        console.error(`Failed to feature post ${id}:`, err.message);
+      }))
     );
-    
-    console.log(`Featured posts (${countToActivate}):`, toFeature.join(", "));
+
+    console.log("Successfully featured posts:", toFeature.join(", "));
   } catch (err) {
     console.error("Fatal error:", err);
     process.exit(1);
