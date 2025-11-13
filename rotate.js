@@ -1,8 +1,8 @@
 // rotate.js
 import fetch from "node-fetch";
 
-// Hyvor Blogs API base (NO /{POST_ID} at end!)
-const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/timesofmadeira/post";
+// Hyvor Blogs API base, using the correct subdomain
+const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira/post";
 
 // Numeric post IDs (Times of Madeira)
 const posts = [
