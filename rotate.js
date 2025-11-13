@@ -1,11 +1,13 @@
 // rotate.js
 import fetch from "node-fetch";
 
-const SITE_ID = "10100"; // 👈 replace with your actual number
-const API_BASE = `https://blogs.hyvor.com/api/console/sites/${10100}/posts`;
+// 👇 Replace this with your actual Hyvor site ID
+const SITE_ID = "10100";
 
+// 👇 This is the correct API base for Hyvor Console
+const API_BASE = `https://console.hyvor.com/api/sites/${SITE_ID}/posts`;
 
-// Post IDs (use numeric or string IDs)
+// Post IDs (from your Times of Madeira links)
 const posts = [
   "17069",
   "29508",
@@ -13,7 +15,7 @@ const posts = [
   "21332"
 ];
 
-// sanity check: must be even number of posts if we pick pairs
+// Must be even number of posts (pairs)
 if (posts.length % 2 !== 0) {
   console.error("posts array length should be even (pairs).");
   process.exit(1);
@@ -38,12 +40,11 @@ async function patchPost(id, body, attempt = 1) {
         "Authorization": `Bearer ${HYVOR_API_KEY}`,
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(body),
-      timeout: 15000
+      body: JSON.stringify(body)
     });
 
     if (res.status === 429) {
-      // rate limited — exponential backoff
+      // Rate limited — exponential backoff
       const wait = Math.min(60000, 2000 * attempt);
       console.warn(`429 for ${id}. Backing off ${wait}ms (attempt ${attempt})`);
       await sleep(wait);
@@ -78,19 +79,23 @@ async function main() {
   const cycle = getCycleIndex();
   const pairCount = posts.length / 2;
 
-  // which pair index is current? 0..pairCount-1
+  // Determine which pair is current and which is previous
   const currentPairIndex = cycle % pairCount;
   const prevPairIndex = (currentPairIndex - 1 + pairCount) % pairCount;
 
   const curA = posts[currentPairIndex * 2];
   const curB = posts[currentPairIndex * 2 + 1];
-
   const prevA = posts[prevPairIndex * 2];
   const prevB = posts[prevPairIndex * 2 + 1];
 
-  console.log("cycle:", cycle, "current pair index:", currentPairIndex, "posts on:", curA, curB, "posts off:", prevA, prevB);
+  console.log(
+    "cycle:", cycle,
+    "current pair index:", currentPairIndex,
+    "posts on:", curA, curB,
+    "posts off:", prevA, prevB
+  );
 
-  // First unfeature previous ones (in case they were still featured)
+  // Unfeature previous pair
   try {
     await Promise.all([
       patchPost(prevA, { is_featured: false }),
@@ -99,10 +104,9 @@ async function main() {
     console.log("Unfeatured previous pair:", prevA, prevB);
   } catch (err) {
     console.error("Failed to unfeature previous pair:", err);
-    // continue and try to set new featured anyway
   }
 
-  // Then feature current ones
+  // Feature current pair
   try {
     await Promise.all([
       patchPost(curA, { is_featured: true }),
