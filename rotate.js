@@ -1,7 +1,9 @@
 // rotate.js
 import fetch from "node-fetch";
 
-const API_BASE = "https://blogs.hyvor.com/api/console/post";
+const SITE_ID = "10100"; // 👈 replace with your actual number
+const API_BASE = `https://blogs.hyvor.com/api/console/sites/${SITE_ID}/posts`;
+
 
 // Post IDs (use numeric or string IDs)
 const posts = [
