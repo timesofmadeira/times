@@ -51,17 +51,11 @@ const posts = [
   "32295",
   "32282",
   "31651"
-  
 ];
-
-if (posts.length % 2 !== 0) {
-  console.error("posts array length should be even (pairs).");
-  process.exit(1);
-}
 
 const HYVOR_API_KEY = process.env.HYVOR_API_KEY;
 if (!HYVOR_API_KEY) {
-  console.error("HYVOR_API_KEY env var missing");
+  console.error("HYVOR_API_KEY env var missing. Set it before running.");
   process.exit(1);
 }
 
@@ -106,56 +100,45 @@ async function patchPost(id, body, attempt = 1) {
   }
 }
 
-function getCycleIndex() {
-  const minutesSinceEpoch = Math.floor(Date.now() / 60000);
-  const cycle = Math.floor(minutesSinceEpoch / 5);
-  return cycle;
+// Returns array of unique random elements from the given array
+function getRandomElements(array, count) {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+// In this script, active posts are tracked outside the API, so store in file or environment if needed.
+// For simplicity assume we check all posts for featured and then unfeature them to maintain state consistency.
+
+async function unfeatureAll() {
+  console.log("Unfeaturing all currently featured posts...");
+  await Promise.all(
+    posts.map(id => patchPost(id, { is_featured: false }).catch(err => {
+      console.error(`Failed to unfeature post ${id}:`, err.message);
+    }))
+  );
 }
 
 async function main() {
-  const cycle = getCycleIndex();
-  const pairCount = posts.length / 2;
-
-  const currentPairIndex = cycle % pairCount;
-  const prevPairIndex = (currentPairIndex - 1 + pairCount) % pairCount;
-
-  const curA = posts[currentPairIndex * 2];
-  const curB = posts[currentPairIndex * 2 + 1];
-  const prevA = posts[prevPairIndex * 2];
-  const prevB = posts[prevPairIndex * 2 + 1];
-
-  console.log(
-    "cycle:", cycle,
-    "current pair index:", currentPairIndex,
-    "posts on:", curA, curB,
-    "posts off:", prevA, prevB
-  );
-
-  // Unfeature previous pair
+  // Activate 1 to 3 random post IDs every run (every 10 minutes ideally via cron)
+  const countToActivate = Math.floor(Math.random() * 3) + 1; // 1,2 or 3
+  
   try {
-    await Promise.all([
-      patchPost(prevA, { is_featured: false }),
-      patchPost(prevB, { is_featured: false })
-    ]);
-    console.log("Unfeatured previous pair:", prevA, prevB);
+    // Step 1: Unfeature all posts currently featured
+    await unfeatureAll();
+    
+    // Step 2: Pick random posts to feature
+    const toFeature = getRandomElements(posts, countToActivate);
+    
+    // Step 3: Feature selected posts
+    await Promise.all(
+      toFeature.map(id => patchPost(id, { is_featured: true }))
+    );
+    
+    console.log(`Featured posts (${countToActivate}):`, toFeature.join(", "));
   } catch (err) {
-    console.error("Failed to unfeature previous pair:", err);
-  }
-
-  // Feature current pair
-  try {
-    await Promise.all([
-      patchPost(curA, { is_featured: true }),
-      patchPost(curB, { is_featured: true })
-    ]);
-    console.log("Featured current pair:", curA, curB);
-  } catch (err) {
-    console.error("Failed to feature current pair:", err);
-    process.exitCode = 2;
+    console.error("Fatal error:", err);
+    process.exit(1);
   }
 }
 
-main().catch(err => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
+main();
