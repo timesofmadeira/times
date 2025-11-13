@@ -1,13 +1,10 @@
 // rotate.js
 import fetch from "node-fetch";
 
-// 👇 Replace this with your actual Hyvor site ID
-const SITE_ID = "10100";
+// Hyvor Blogs API base (NO /{POST_ID} at end!)
+const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/timesofmadeira/post";
 
-// 👇 This is the correct API base for Hyvor Console
-const API_BASE = `https://blogs.hyvor.com/api/console/v0/blog/timesofmadeira/post/{POST_ID}`;
-
-// Post IDs (from your Times of Madeira links)
+// Numeric post IDs (Times of Madeira)
 const posts = [
   "17069",
   "29508",
