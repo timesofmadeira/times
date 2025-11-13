@@ -8,6 +8,7 @@ on:
 jobs:
   rotate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout (not strictly required but handy)
         uses: actions/checkout@v4
@@ -17,10 +18,8 @@ jobs:
         with:
           node-version: '20'
 
-        - name: Install dependencies
+      - name: Install dependencies
         run: npm install
-        working-directory: .
-
 
       - name: Rotate featured posts
         env:
