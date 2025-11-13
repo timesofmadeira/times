@@ -1,10 +1,9 @@
 // rotate.js
 import fetch from "node-fetch";
 
-// Hyvor Blogs API base with the correct subdomain (NO /post at end)
+// Hyvor Blogs API base path
 const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira";
 
-// Numeric post IDs (Times of Madeira)
 const posts = [
   "17069",
   "29508",
@@ -12,7 +11,6 @@ const posts = [
   "21332"
 ];
 
-// Must be even number of posts (pairs)
 if (posts.length % 2 !== 0) {
   console.error("posts array length should be even (pairs).");
   process.exit(1);
@@ -35,14 +33,13 @@ async function patchPost(id, body, attempt = 1) {
     const res = await fetch(url, {
       method: "PATCH",
       headers: {
-        "Authorization": `Bearer ${HYVOR_API_KEY}`,
+        "X-API-KEY": HYVOR_API_KEY,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(body)
     });
 
     if (res.status === 429) {
-      // Rate limited — exponential backoff
       const wait = Math.min(60000, 2000 * attempt);
       console.warn(`429 for ${id}. Backing off ${wait}ms (attempt ${attempt})`);
       await sleep(wait);
@@ -67,7 +64,6 @@ async function patchPost(id, body, attempt = 1) {
 }
 
 function getCycleIndex() {
-  // number of 5-minute intervals since epoch
   const minutesSinceEpoch = Math.floor(Date.now() / 60000);
   const cycle = Math.floor(minutesSinceEpoch / 5);
   return cycle;
@@ -77,7 +73,6 @@ async function main() {
   const cycle = getCycleIndex();
   const pairCount = posts.length / 2;
 
-  // Determine which pair is current and which is previous
   const currentPairIndex = cycle % pairCount;
   const prevPairIndex = (currentPairIndex - 1 + pairCount) % pairCount;
 
