@@ -166,7 +166,12 @@ const posts = [...new Set([
   "49395", // example.com/49395
   "49456", // example.com/49456
   "49695", // example.com/49695
-  "49891"  // example.com/49891
+  "49891",  // example.com/49891
+  "50065",  // https://www.timesofmadeira.com/colossus-the-rise-and-fall-of-madeiras-hotel-atlantis
+  "50156",  // https://www.timesofmadeira.com/joao-jardim-condemns-hiking-restrictions-for-residents
+  "50147",  // https://www.timesofmadeira.com/madeira-home-prices-up-146-in-2025
+  "50175",  // https://www.timesofmadeira.com/black-gold-black-friday-how-venezuelans-returned-to-madeira
+  "50254"  // https://www.timesofmadeira.com/madeira-rent-levels-now-reach-porto-district
 ])];
 
 const HYVOR_API_KEY = process.env.HYVOR_API_KEY;
