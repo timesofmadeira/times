@@ -37,7 +37,6 @@ const posts = [...new Set([
   "27271", // https://www.timesofmadeira.com/tiny-house-madeira-affordable-living-on-the-island
   "27175", // https://www.timesofmadeira.com/rise-in-unskilled-labor-in-madeira
   "27530", // https://www.timesofmadeira.com/festival-colombo-draws-crowds-to-porto-santo
-  "27658", // https://www.timesofmadeira.com/is-president-albuquerque-guilty
   "27551", // https://www.timesofmadeira.com/madeiras-foreign-population-grows-by-19-2-percent
   "17582", // https://www.timesofmadeira.com/things-to-do-on-a-rainy-day-in-funchal
   "28732", // https://www.timesofmadeira.com/madeira-faces-record-migration-vanishing-youth-as-women-outnumber-men
