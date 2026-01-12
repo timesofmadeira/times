@@ -170,9 +170,9 @@ const posts = [...new Set([
   "50156",  // https://www.timesofmadeira.com/joao-jardim-condemns-hiking-restrictions-for-residents
   "50147",  // https://www.timesofmadeira.com/madeira-home-prices-up-146-in-2025
   "50175",  // https://www.timesofmadeira.com/black-gold-black-friday-how-venezuelans-returned-to-madeira
-  "50254,"  // https://www.timesofmadeira.com/madeira-rent-levels-now-reach-porto-district
-  "50293,"  // https://www.timesofmadeira.com/the-two-paths-of-madeira-understanding-levadas-and-veredas
-  "50382,"  // https://www.timesofmadeira.com/madeira-cruise-tourism-brings-in-eur62-million-in-2025
+  "50254",  // https://www.timesofmadeira.com/madeira-rent-levels-now-reach-porto-district
+  "50293",  // https://www.timesofmadeira.com/the-two-paths-of-madeira-understanding-levadas-and-veredas
+  "50382",  // https://www.timesofmadeira.com/madeira-cruise-tourism-brings-in-eur62-million-in-2025
   "50369"  // https://www.timesofmadeira.com/machico-and-santana-oppose-hiking-time-slots-for-residents
 ])];
 
