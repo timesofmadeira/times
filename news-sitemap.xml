@@ -56,18 +56,4 @@
       <image:loc>https://www.timesofmadeira.com/media/hospital-bed-sos.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/patient-dies-after-fall-from-third-floor-window-at-funchal-hospital</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-13T20:51:56Z</news:publication_date>
-      <news:title>Patient Dies After Fall From Third Floor Window at Funchal Hospital</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/hospital-marmeleiros.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
