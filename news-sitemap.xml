@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.timesofmadeira.com/laurissilva-forest-resilient-as-agriculture-halves-scrubland-grows</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-14T23:23:51Z</news:publication_date>
+      <news:title>Laurissilva Forest Resilient as Agriculture Halves, Scrubland Grows</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/laurissilva-forest-madeira.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.timesofmadeira.com/madeira-launches-venture-capital-fund-to-support-local-startups</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-14T21:02:57Z</news:publication_date>
+      <news:title>Madeira Launches Venture Capital Fund to Support Local Companies</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/camara-de-lobos-view.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.timesofmadeira.com/hospital-beds-as-homes-madeiras-patients-with-nowhere-to-go</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-14T11:45:27Z</news:publication_date>
+      <news:title>Hospital Beds as Homes: Madeira's Patients with Nowhere to Go</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/hospital-bed-sos.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.timesofmadeira.com/patient-dies-after-fall-from-third-floor-window-at-funchal-hospital</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-13T20:51:56Z</news:publication_date>
+      <news:title>Patient Dies After Fall From Third Floor Window at Funchal Hospital</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/hospital-marmeleiros.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.timesofmadeira.com/25-year-old-woman-dies-in-car-accident-in-funchal</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-13T15:12:36Z</news:publication_date>
+      <news:title>25-Year-Old Woman Dies in Car Accident in Funchal</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/accident-traffic-cone-1.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.timesofmadeira.com/inflation-in-madeira-increases-to-35-in-2025</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-13T12:34:24Z</news:publication_date>
+      <news:title>Inflation in Madeira Increases to 3.5% in 2025</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/inflation-madeira-2025.webp</image:loc>
+    </image:image>
+  </url>
+</urlset>
