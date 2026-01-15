@@ -2,7 +2,8 @@ import requests
 from datetime import datetime
 
 # 1. Fetch data from Hyvor
-API_URL = "https://blogs.hyvor.com/api/data/v0/times-of-madeira/posts?filter=published_at>'-2 days'"
+# Note: Ensure this URL works in your browser first
+API_URL = "https://blogs.hyvor.com/api/data/v0/times-of-madeira/posts?filter=published_at%3E'-2%20days'"
 response = requests.get(API_URL).json()
 posts = response.get('data', [])
 
@@ -15,10 +16,14 @@ xml += 'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
 # 3. Add each post to the sitemap
 for post in posts:
     # Format date for Google (ISO 8601)
+    # Hyvor returns timestamps in seconds
     pub_date = datetime.fromtimestamp(post['published_at']).isoformat() + "Z"
     
+    # Use full domain
+    url = f"https://www.timesofmadeira.com/{post['slug']}"
+    
     xml += '  <url>\n'
-    xml += f'    <loc>https://www.timesofmadeira.com/{post["slug"]}</loc>\n'
+    xml += f'    <loc>{url}</loc>\n'
     xml += '    <news:news>\n'
     xml += '      <news:publication>\n'
     xml += '        <news:name>Times of Madeira</news:name>\n'
@@ -28,9 +33,10 @@ for post in posts:
     xml += f'      <news:title>{post["title"]}</news:title>\n'
     xml += '    </news:news>\n'
     
+    # Check if a featured image exists
     if post.get('featured_image_url'):
         xml += '    <image:image>\n'
-        xml += f'      <image:loc>{post["featured_image_url"]}</image:loc>\n'\
+        xml += f'      <image:loc>{post["featured_image_url"]}</image:loc>\n'
         xml += '    </image:image>\n'
         
     xml += '  </url>\n'
@@ -40,3 +46,5 @@ xml += '</urlset>'
 # 4. Save to file
 with open("news-sitemap.xml", "w") as f:
     f.write(xml)
+
+print(f"Sitemap generated successfully with {len(posts)} posts.")
