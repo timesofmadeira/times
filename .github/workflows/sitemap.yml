@@ -1,0 +1,31 @@
+name: Generate News Sitemap
+on:
+  schedule:
+    - cron: '0 * * * *' # This runs every hour. You can change it later.
+  workflow_dispatch: # This adds a button so you can run it manually to test.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        run: python generate_sitemap.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'Sitemap Bot'
+          git config --global user.email 'bot@timesofmadeira.com'
+          git add news-sitemap.xml
+          git commit -m "Update News Sitemap" || exit 0
+          git push
