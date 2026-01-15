@@ -56,18 +56,4 @@
       <image:loc>https://www.timesofmadeira.com/media/hospital-marmeleiros.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/25-year-old-woman-dies-in-car-accident-in-funchal</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-13T15:12:36Z</news:publication_date>
-      <news:title>25-Year-Old Woman Dies in Car Accident in Funchal</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/accident-traffic-cone-1.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
