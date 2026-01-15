@@ -70,18 +70,4 @@
       <image:loc>https://www.timesofmadeira.com/media/accident-traffic-cone-1.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/inflation-in-madeira-increases-to-35-in-2025</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-13T12:34:24Z</news:publication_date>
-      <news:title>Inflation in Madeira Increases to 3.5% in 2025</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/inflation-madeira-2025.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
