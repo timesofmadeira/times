@@ -56,18 +56,4 @@
       <image:loc>https://www.timesofmadeira.com/media/laurissilva-forest-madeira.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/madeira-launches-venture-capital-fund-to-support-local-startups</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-14T21:02:57Z</news:publication_date>
-      <news:title>Madeira Launches Venture Capital Fund to Support Local Companies</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/camara-de-lobos-view.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
