@@ -42,18 +42,4 @@
       <image:loc>https://www.timesofmadeira.com/media/pr1-hiking-stop-sign.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/laurissilva-forest-resilient-as-agriculture-halves-scrubland-grows</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-14T23:23:51Z</news:publication_date>
-      <news:title>Laurissilva Forest Resilient as Agriculture Halves, Scrubland Grows</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/laurissilva-forest-madeira.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
