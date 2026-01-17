@@ -28,18 +28,4 @@
       <image:loc>https://www.timesofmadeira.com/media/animal-welfare-help.jpg</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/ps-madeira-pushes-to-abolish-hiking-time-slots-for-residents</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-15T17:01:09Z</news:publication_date>
-      <news:title>PS-Madeira Pushes to Abolish Hiking Time Slots for Residents</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/pr1-hiking-stop-sign.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
