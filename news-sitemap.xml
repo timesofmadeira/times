@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/portugals-president-symbolic-figure-with-real-power</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-18T19:58:18Z</news:publication_date>
+      <news:title>Portugal’s President: Symbolic Figure With Real Power</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/president-portugal-rights.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/portugals-presidential-election-a-first-in-40-years</loc>
     <news:news>
       <news:publication>
@@ -26,20 +40,6 @@
     </news:news>
     <image:image>
       <image:loc>https://www.timesofmadeira.com/media/trump-greenland.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/siga-bus-network-explained-tickets-tips-and-fares-for-2026</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-16T20:19:25Z</news:publication_date>
-      <news:title>SIGA Bus Network Explained: Tickets, Tips, and Fares for 2026</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/siga-2026.webp</image:loc>
     </image:image>
   </url>
 </urlset>
