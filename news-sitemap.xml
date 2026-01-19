@@ -70,18 +70,4 @@
       <image:loc>https://www.timesofmadeira.com/media/task-01kf7eg9cdfkra0s0np5wty8xp-1768702895-img-0.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/the-greenland-standoff-how-trumps-land-grab-could-succeed</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-17T18:33:48Z</news:publication_date>
-      <news:title>The Greenland Standoff: How Trump's Land Grab Could Succeed</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/trump-greenland.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
