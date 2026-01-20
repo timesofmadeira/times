@@ -56,18 +56,4 @@
       <image:loc>https://www.timesofmadeira.com/media/president-portugal-rights.jpg</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/portugals-presidential-election-a-first-in-40-years</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-18T02:13:22Z</news:publication_date>
-      <news:title>Portugals Presidential Election: A First in 40 Years</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/task-01kf7eg9cdfkra0s0np5wty8xp-1768702895-img-0.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
