@@ -42,18 +42,4 @@
       <image:loc>https://www.timesofmadeira.com/media/andre-ventura-madeira.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/antonio-jose-seguro-leading-presidential-election</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-18T20:43:32Z</news:publication_date>
-      <news:title>António José Seguro Leading Presidential Election</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/president-portugal-2026.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
