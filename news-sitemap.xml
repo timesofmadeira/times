@@ -56,18 +56,4 @@
       <image:loc>https://www.timesofmadeira.com/media/president-portugal-2026.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/portugals-president-symbolic-figure-with-real-power</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-18T19:58:18Z</news:publication_date>
-      <news:title>Portugal’s President: Symbolic Figure With Real Power</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/president-portugal-rights.jpg</image:loc>
-    </image:image>
-  </url>
 </urlset>
