@@ -42,18 +42,4 @@
       <image:loc>https://www.timesofmadeira.com/media/ronaldo-statue-madeira.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/albuquerque-calls-election-results-monumental-defeat</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-19T17:11:47Z</news:publication_date>
-      <news:title>Albuquerque Calls Election Results “Monumental Defeat”</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/albuquerue-minimum-salary.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
