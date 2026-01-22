@@ -56,32 +56,4 @@
       <image:loc>https://www.timesofmadeira.com/media/vr1-madeira-road-radar.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/police-apprehends-man-who-set-fire-to-cr7-statue</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-20T22:15:16Z</news:publication_date>
-      <news:title>Police Apprehends Man Who Set Fire to CR7 Statue</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/ronaldo-statue-burning.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/madeiras-teatro-metaphora-wins-international-award</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-20T21:35:31Z</news:publication_date>
-      <news:title>Madeira's Teatro Metaphora Wins International Award</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/camara-do-lobos.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
