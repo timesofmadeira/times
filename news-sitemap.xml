@@ -56,18 +56,4 @@
       <image:loc>https://www.timesofmadeira.com/media/camara-de-lobos-freguesia.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/fixed-speed-radars-coming-to-madeira-this-year</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-21T19:41:45Z</news:publication_date>
-      <news:title>Fixed Speed Radars Coming to Madeira This Year</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/vr1-madeira-road-radar.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
