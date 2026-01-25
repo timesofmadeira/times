@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/u-turn-residents-can-now-access-trails-without-online-booking</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-25T22:37:49Z</news:publication_date>
+      <news:title>U-Turn! Residents Can Now Access Trails Without Online Booking</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/levada-madeira.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/political-parties-clash-over-sale-of-dr-nelio-mendonca-hospital</loc>
     <news:news>
       <news:publication>
