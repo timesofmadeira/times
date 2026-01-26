@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/joseph-and-chandra-bring-rain-and-strong-winds-to-madeira</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-01-26T20:18:14Z</news:publication_date>
+      <news:title>Joseph and Chandra Bring Rain and Strong Winds to Madeira</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/palms-in-wind.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/madeira-airports-see-174-rise-in-international-traffic-in-2025</loc>
     <news:news>
       <news:publication>
