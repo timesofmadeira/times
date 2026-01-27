@@ -173,7 +173,14 @@ const posts = [...new Set([
   "50254",  // https://www.timesofmadeira.com/madeira-rent-levels-now-reach-porto-district
   "50293",  // https://www.timesofmadeira.com/the-two-paths-of-madeira-understanding-levadas-and-veredas
   "50382",  // https://www.timesofmadeira.com/madeira-cruise-tourism-brings-in-eur62-million-in-2025
-  "50369"  // https://www.timesofmadeira.com/machico-and-santana-oppose-hiking-time-slots-for-residents
+  "50369",  // https://www.timesofmadeira.com/machico-and-santana-oppose-hiking-time-slots-for-residents
+  "50382",  // https://www.timesofmadeira.com/madeira-cruise-tourism-brings-in-eur62-million-in-2025
+  "49345",  // https://www.timesofmadeira.com/from-jesuit-priests-to-malmsey-faja-dos-padres-400-year-legacy
+  "50679",  // https://www.timesofmadeira.com/portugals-president-symbolic-figure-with-real-power
+  "50382",  // https://www.timesofmadeira.com/fixed-speed-radars-coming-to-madeira-this-year
+  "50643",  // https://www.timesofmadeira.com/siga-bus-network-explained-tickets-tips-and-fares-for-2026
+  "50820",  // https://www.timesofmadeira.com/ponta-do-sol-announces-estrada-dos-anjos-project
+  "50930"  // https://www.timesofmadeira.com/madeira-airports-see-174-rise-in-international-traffic-in-2025
 ])];
 
 const HYVOR_API_KEY = process.env.HYVOR_API_KEY;
