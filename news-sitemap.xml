@@ -28,18 +28,4 @@
       <image:loc>https://www.timesofmadeira.com/media/real-estate-2025-2026.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/citizens-warn-of-criminals-posing-as-ministry-officials</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-26T22:59:59Z</news:publication_date>
-      <news:title>Citizens Warn of Criminals Posing as Ministry Officials</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/scam-alert.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
