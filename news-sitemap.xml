@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/nurses-flag-care-risks-sesaram-responds-with-16-new-hires</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-01T23:50:46Z</news:publication_date>
+      <news:title>Nurses Flag Care Risks, SESARAM Responds With 16 New Hires</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/nurse-hospital-worker.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/ponta-do-sol-plans-to-reopen-lugar-de-baixo-marina</loc>
     <news:news>
       <news:publication>
