@@ -42,18 +42,4 @@
       <image:loc>https://www.timesofmadeira.com/media/nurse-hospital-worker.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/ponta-do-sol-plans-to-reopen-lugar-de-baixo-marina</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-01T16:04:25Z</news:publication_date>
-      <news:title>Ponta do Sol Plans to Reopen Lugar de Baixo Marina</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/lugar-do-baixo.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
