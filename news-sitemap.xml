@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/madeira-taxi-fare-cut-fails-as-taximeters-reject-lower-rates</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-04T16:40:58Z</news:publication_date>
+      <news:title>Madeira Taxi Fare Cut Fails as Taximeters Reject Lower Rates</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/taxi-madeira-taxis.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/trespassing-at-praia-formosa-now-result-in-fines-of-up-to-eur300</loc>
     <news:news>
       <news:publication>
