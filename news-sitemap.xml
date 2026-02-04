@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/trespassing-at-praia-formosa-now-result-in-fines-of-up-to-eur300</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-02-04T00:04:12Z</news:publication_date>
+      <news:title>Trespassing at Praia Formosa Now Results in Fines of Up to €300</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/aviso-praia-formosa.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/suffering-from-obesity-and-diabetes-sns-now-covers-ozempic</loc>
     <news:news>
       <news:publication>
@@ -26,20 +40,6 @@
     </news:news>
     <image:image>
       <image:loc>https://www.timesofmadeira.com/media/recycling-waste-madeira.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/nurses-flag-care-risks-sesaram-responds-with-16-new-hires</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-01T23:50:46Z</news:publication_date>
-      <news:title>Nurses Flag Care Risks, SESARAM Responds With 16 New Hires</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/nurse-hospital-worker.webp</image:loc>
     </image:image>
   </url>
 </urlset>
