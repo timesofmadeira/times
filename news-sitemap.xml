@@ -14,18 +14,4 @@
       <image:loc>https://www.timesofmadeira.com/media/taxi-madeira-taxis.jpg</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/trespassing-at-praia-formosa-now-result-in-fines-of-up-to-eur300</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-04T00:04:12Z</news:publication_date>
-      <news:title>Trespassing at Praia Formosa Now Results in Fines of Up to €300</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/aviso-praia-formosa.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
