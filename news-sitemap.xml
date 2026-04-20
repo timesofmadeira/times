@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/try-the-madeira-bus-app-an-interview-with-the-developer</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-20T16:53:51Z</news:publication_date>
+      <news:title>Try the Madeira Bus App: An Interview with the Developer</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/madeira-bus-app.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/power-without-expiry-psd-madeira-removes-term-limits</loc>
     <news:news>
       <news:publication>
