@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.timesofmadeira.com/madeira-housing-prices-fall-83-in-late-2025-despite-national-rise</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-25T20:11:58Z</news:publication_date>
+      <news:title>Madeira Housing Prices Fall 8.3% in Late 2025 Despite National Rise</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/real-estate-madeira.jpg</image:loc>
+    </image:image>
+  </url>
 </urlset>
