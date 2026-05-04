@@ -101,7 +101,6 @@ const posts = [...new Set([
   "41023", // https://www.timesofmadeira.com/traffic-chaos-madeiras-west-coast-choked-with-cars
   "43936", // https://www.timesofmadeira.com/young-madeirans-leave-for-mainland-facing-hardships
   "44260", // https://www.timesofmadeira.com/tourists-fined-eur750-for-trespassing-on-pr1
-  "44527", // https://www.timesofmadeira.com/ryanair-stations-a-third-aircraft-in-madeira-this-winter
   "44814", // https://www.timesofmadeira.com/government-says-madeira-has-capacity-for-more-tourism
   "43980", // https://www.timesofmadeira.com/we-need-to-talk-about-mercado-dos-lavradores
   "45279", // https://www.timesofmadeira.com/madeira-tunnels-soon-have-full-5g-mobile-coverage
@@ -115,57 +114,44 @@ const posts = [...new Set([
   "46096", // https://www.timesofmadeira.com/rental-cars-reach-102852-bookings-eur17m-in-revenue
   "46141", // https://www.timesofmadeira.com/parliament-orders-study-on-living-costs-in-madeira
   "46025", // https://www.timesofmadeira.com/madeira-wants-to-give-housing-to-80-of-homeless-by-2030
-  "45892", // example.com/45892
-  "46417", // example.com/46417
-  "46360", // example.com/46360
-  "46241", // example.com/46241
-  "46718", // example.com/46718
-  "46534", // example.com/46534
-  "47119", // example.com/47119
-  "47081", // example.com/47081
-  "46795", // example.com/46795
-  "47333", // example.com/47333
-  "47262", // example.com/47262
-  "20611", // example.com/20611
-  "47048", // example.com/47048
-  "47596", // example.com/47596
-  "47451", // example.com/47451
-  "16579", // example.com/16579
-  "47768", // example.com/47768
-  "47818", // example.com/47818
-  "47853", // example.com/47853
-  "47937", // example.com/47937
-  "47943", // example.com/47943
-  "48006", // example.com/48006
-  "48152", // example.com/48152
-  "48066", // example.com/48066
-  "48213", // example.com/48213
-  "48243", // example.com/48243
-  "48429", // example.com/48429
-  "48380", // example.com/48380
-  "48438", // example.com/48438
-  "48451", // example.com/48451
-  "48478", // example.com/48478
-  "48493", // example.com/48493
-  "48559", // example.com/48559
-  "48621", // example.com/48621
-  "48661", // example.com/48661
-  "48713", // example.com/48713
-  "48718", // example.com/48718
-  "48873", // example.com/48873
-  "48944", // example.com/48944
-  "48882", // example.com/48882
-  "49092", // example.com/49092
-  "49187", // example.com/49187
-  "49252", // example.com/49252
-  "49297", // example.com/49297
-  "49379", // example.com/49379
-  "49339", // example.com/49339
-  "49292", // example.com/49292
-  "49395", // example.com/49395
-  "49456", // example.com/49456
-  "49695", // example.com/49695
-  "49891",  // example.com/49891
+  "46417", // https://www.timesofmadeira.com/chega-leader-calls-for-salazar-style-rule-in-madeira
+  "46360", // https://www.timesofmadeira.com/do-rental-car-companies-vandalize-each-others-cars-to-survive
+  "46241", // https://www.timesofmadeira.com/why-portugals-face-veil-ban-didnt-go-far-enough
+  "46718", // https://www.timesofmadeira.com/funchal-has-the-highest-rental-costs-in-portugal
+  "46534", // https://www.timesofmadeira.com/the-battle-of-funchal-germanys-assault-during-world-war-i
+  "46795", // https://www.timesofmadeira.com/tourism-in-madeira-rises-97-as-19-million-visitors-arrive
+  "47333", // https://www.timesofmadeira.com/are-strikes-in-madeira-hard-because-everyone-knows-everyone
+  "20611", // https://www.timesofmadeira.com/the-madeira-uprising-of-1931-from-flour-revolt-to-rebellion
+  "47048", // https://www.timesofmadeira.com/golf-madness-is-the-archipelago-going-to-have-seven-golf-courses
+  "47596", // https://www.timesofmadeira.com/why-madeira-is-a-tornado-proof-island
+  "47451", // https://www.timesofmadeira.com/tap-air-portugal-ranked-2nd-cheapest-european-airline-in-2025
+  "16579", // https://www.timesofmadeira.com/lidl-hesitates-to-invest-madeira
+  "47853", // https://www.timesofmadeira.com/madeiras-large-white-first-european-butterfly-declared-extinct
+  "47943", // https://www.timesofmadeira.com/porto-moniz-builds-public-animal-shelter
+  "48006", // https://www.timesofmadeira.com/emigration-73-of-18-24-year-olds-consider-leaving-portugal
+  "48152", // https://www.timesofmadeira.com/mohammed-bin-salman-kingdom-of-fear
+  "48066", // https://www.timesofmadeira.com/portugal-among-top-10-english-speaking-countries-globally
+  "48243", // https://www.timesofmadeira.com/quercus-calls-golf-courses-on-agricultural-land-criminal
+  "48429", // https://www.timesofmadeira.com/madeira-leads-luxury-housing-supply-on-portuguese-islands
+  "48380", // https://www.timesofmadeira.com/coup-of-25-november-1975-the-birth-of-modern-portugal
+  "48438", // https://www.timesofmadeira.com/rhetoric-vs-reality-chegas-push-for-a-fourth-republic
+  "48451", // https://www.timesofmadeira.com/albuquerque-eyes-miami-madeira-seeks-growth-in-us-travel
+  "48478", // https://www.timesofmadeira.com/why-airport-growth-depends-on-factors-outside-the-terminal
+  "48493", // https://www.timesofmadeira.com/portugal-faces-more-than-25000-pending-nationality-requests
+  "48559", // https://www.timesofmadeira.com/how-to-buy-your-madeira-hiking-trail-ticket-with-simplifica
+  "48621", // https://www.timesofmadeira.com/madeiras-development-crisis-gdp-rises-relative-income-falls
+  "48661", // https://www.timesofmadeira.com/madeiras-development-crisis-gdp-rises-relative-income-falls
+  "48713", // https://www.timesofmadeira.com/the-surprising-story-behind-cristiano-ronaldos-name
+  "48718", // https://www.timesofmadeira.com/the-story-behind-the-flag-of-madeira
+  "48873", // https://www.timesofmadeira.com/illusion-of-progress-jpp-condemns-madeiras-golf-strategy
+  "48944", // https://www.timesofmadeira.com/world-travel-awards-a-commercial-ecosystem-disguised-as-prestige
+  "49252", // https://www.timesofmadeira.com/madeira-prison-holds-341-inmates-including-seven-women
+  "49339", // https://www.timesofmadeira.com/fajas-of-madeira-history-and-life-below-the-cliffs
+  "49292", // https://www.timesofmadeira.com/airbaltic-flight-struggles-to-land-at-madeira-airport
+  "49395", // https://www.timesofmadeira.com/madeira-plans-study-for-megayacht-marina
+  "49456", // https://www.timesofmadeira.com/immigrants-pay-five-times-more-social-security-than-they-claim
+  "49695", // https://www.timesofmadeira.com/madeiras-debt-to-gdp-ratio-now-at-612
+  "49891",  // https://www.timesofmadeira.com/santana-madeiras-most-affordable-housing-market-at-eur1792m2
   "50065",  // https://www.timesofmadeira.com/colossus-the-rise-and-fall-of-madeiras-hotel-atlantis
   "50156",  // https://www.timesofmadeira.com/joao-jardim-condemns-hiking-restrictions-for-residents
   "50147",  // https://www.timesofmadeira.com/madeira-home-prices-up-146-in-2025
@@ -181,6 +167,10 @@ const posts = [...new Set([
   "50643",  // https://www.timesofmadeira.com/siga-bus-network-explained-tickets-tips-and-fares-for-2026
   "50820",  // https://www.timesofmadeira.com/ponta-do-sol-announces-estrada-dos-anjos-project
   "50930"  // https://www.timesofmadeira.com/madeira-airports-see-174-rise-in-international-traffic-in-2025
+  "50969"  // https://www.timesofmadeira.com/should-madeira-spread-tourism-beyond-crowded-hotspots
+  "51049"  // https://www.timesofmadeira.com/ponta-do-sol-plans-to-reopen-lugar-de-baixo-marina
+  "53122"  // https://www.timesofmadeira.com/power-without-expiry-psd-madeira-removes-term-limits
+  "53316"  // https://www.timesofmadeira.com/madeira-housing-prices-fall-83-in-late-2025-despite-national-rise
 ])];
 
 const HYVOR_API_KEY = process.env.HYVOR_API_KEY;
