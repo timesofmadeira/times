@@ -166,10 +166,10 @@ const posts = [...new Set([
   "50382",  // https://www.timesofmadeira.com/fixed-speed-radars-coming-to-madeira-this-year
   "50643",  // https://www.timesofmadeira.com/siga-bus-network-explained-tickets-tips-and-fares-for-2026
   "50820",  // https://www.timesofmadeira.com/ponta-do-sol-announces-estrada-dos-anjos-project
-  "50930"  // https://www.timesofmadeira.com/madeira-airports-see-174-rise-in-international-traffic-in-2025
-  "50969"  // https://www.timesofmadeira.com/should-madeira-spread-tourism-beyond-crowded-hotspots
-  "51049"  // https://www.timesofmadeira.com/ponta-do-sol-plans-to-reopen-lugar-de-baixo-marina
-  "53122"  // https://www.timesofmadeira.com/power-without-expiry-psd-madeira-removes-term-limits
+  "50930",  // https://www.timesofmadeira.com/madeira-airports-see-174-rise-in-international-traffic-in-2025
+  "50969",  // https://www.timesofmadeira.com/should-madeira-spread-tourism-beyond-crowded-hotspots
+  "51049",  // https://www.timesofmadeira.com/ponta-do-sol-plans-to-reopen-lugar-de-baixo-marina
+  "53122",  // https://www.timesofmadeira.com/power-without-expiry-psd-madeira-removes-term-limits
   "53316"  // https://www.timesofmadeira.com/madeira-housing-prices-fall-83-in-late-2025-despite-national-rise
 ])];
 
