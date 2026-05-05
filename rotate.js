@@ -1,10 +1,11 @@
 // rotate.js
-import fetch from "node-fetch";
 
-// Hyvor Blogs API base path
-const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira";
+// If you're on Node 18+, you DON'T need node-fetch
+// import fetch from "node-fetch";
 
-// Removed duplicates while keeping the full list with URLs for your reference
+const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira"; // ⚠️ replace with numeric blog ID if needed
+
+// Full list WITH URL annotations preserved
 const posts = [...new Set([
   "16846", // https://www.timesofmadeira.com/poncha-madeiras-liquid-legacy
   "17069", // https://www.timesofmadeira.com/carnation-revolution-in-a-nutshell
@@ -172,8 +173,9 @@ const posts = [...new Set([
 ])];
 
 const HYVOR_API_KEY = process.env.HYVOR_API_KEY;
+
 if (!HYVOR_API_KEY) {
-  console.error("HYVOR_API_KEY env var missing. Set it before running.");
+  console.error("❌ HYVOR_API_KEY env var missing.");
   process.exit(1);
 }
 
@@ -181,25 +183,47 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**
- * Fetches only the posts that are currently featured.
- */
+async function safeFetch(url, options = {}) {
+  const res = await fetch(url, options);
+  const text = await res.text();
+
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    console.error("❌ Invalid JSON response:");
+    console.error(text);
+    throw new Error("Invalid JSON");
+  }
+
+  if (!res.ok) {
+    console.error("❌ API error:", data);
+    throw new Error(`HTTP ${res.status}`);
+  }
+
+  return data;
+}
+
 async function getFeaturedPosts() {
-  // We use the posts endpoint and filter by featured
-  // Note: API query parameters often use 1/0 for boolean
   const url = `${API_BASE}/posts?is_featured=1`;
-  const res = await fetch(url, {
+  console.log("➡️ Fetching:", url);
+
+  const data = await safeFetch(url, {
     headers: { "X-API-KEY": HYVOR_API_KEY }
   });
-  if (!res.ok) throw new Error(`Failed to fetch featured posts: ${res.statusText}`);
-  const data = await res.json();
-  // We extract just the IDs to process them
+
+  if (!data || !Array.isArray(data.data)) {
+    console.error("❌ Unexpected API structure:");
+    console.dir(data, { depth: null });
+    return [];
+  }
+
   return data.data.map(post => String(post.id));
 }
 
-// PATCH /post/{id} with retry logic
 async function patchPost(id, body, attempt = 1) {
   const url = `${API_BASE}/post/${id}`;
+
   try {
     const res = await fetch(url, {
       method: "PATCH",
@@ -210,18 +234,21 @@ async function patchPost(id, body, attempt = 1) {
       body: JSON.stringify(body)
     });
 
+    const text = await res.text();
+
     if (res.status === 429) {
       const wait = Math.min(60000, 2000 * attempt);
-      console.warn(`429 for ${id}. Backing off ${wait}ms`);
+      console.warn(`⏳ 429 for ${id}, retrying in ${wait}ms`);
       await sleep(wait);
       return patchPost(id, body, attempt + 1);
     }
 
     if (!res.ok) {
-      const text = await res.text();
-      throw new Error(`HTTP ${res.status}: ${text}`);
+      console.error(`❌ PATCH failed for ${id}:`, text);
+      throw new Error(`HTTP ${res.status}`);
     }
-    return await res.json();
+
+    return JSON.parse(text);
   } catch (err) {
     if (attempt < 4) {
       await sleep(1000 * attempt);
@@ -231,7 +258,6 @@ async function patchPost(id, body, attempt = 1) {
   }
 }
 
-// Fisher–Yates shuffle
 function shuffleArray(array) {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -242,36 +268,33 @@ function shuffleArray(array) {
 }
 
 function getRandomElements(array, count) {
-  const shuffled = shuffleArray(array);
-  return shuffled.slice(0, count);
+  return shuffleArray(array).slice(0, count);
 }
 
 async function main() {
   try {
-    // 1. Find what is currently featured so we don't have to guess
-    console.log("Fetching currently featured posts...");
+    console.log("🔍 Fetching currently featured posts...");
     const currentlyFeatured = await getFeaturedPosts();
-    console.log(`Currently featured: ${currentlyFeatured.length} posts.`);
 
-    // 2. Unfeature those posts (running sequentially to be safe)
+    console.log(`📌 Found ${currentlyFeatured.length} featured posts`);
+
     for (const id of currentlyFeatured) {
-      console.log(`Unfeaturing post ID: ${id}`);
+      console.log(`➡️ Unfeaturing ${id}`);
       await patchPost(id, { is_featured: false });
     }
 
-    // 3. Select 1-3 random posts from our master list
     const countToActivate = Math.floor(Math.random() * 3) + 1;
     const toFeature = getRandomElements(posts, countToActivate);
-    console.log(`Selected ${countToActivate} new posts to feature:`, toFeature.join(", "));
 
-    // 4. Feature the new selection
-    await Promise.all(
-      toFeature.map(id => patchPost(id, { is_featured: true }))
-    );
+    console.log(`✨ Featuring ${countToActivate} posts:`, toFeature.join(", "));
 
-    console.log("Successfully rotated featured posts.");
+    for (const id of toFeature) {
+      await patchPost(id, { is_featured: true });
+    }
+
+    console.log("✅ Done.");
   } catch (err) {
-    console.error("Fatal error:", err.message);
+    console.error("💥 Fatal error:", err.message);
     process.exit(1);
   }
 }
