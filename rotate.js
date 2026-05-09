@@ -1,11 +1,10 @@
 // rotate.js
+import fetch from "node-fetch";
 
-// If you're on Node 18+, you DON'T need node-fetch
-// import fetch from "node-fetch";
+// Hyvor Blogs API base path
+const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira";
 
-const API_BASE = "https://blogs.hyvor.com/api/console/v0/blog/times-of-madeira"; // ⚠️ replace with numeric blog ID if needed
-
-// Full list WITH URL annotations preserved
+// Remove duplicates from the array
 const posts = [...new Set([
   "16846", // https://www.timesofmadeira.com/poncha-madeiras-liquid-legacy
   "17069", // https://www.timesofmadeira.com/carnation-revolution-in-a-nutshell
@@ -152,30 +151,31 @@ const posts = [...new Set([
   "49395", // https://www.timesofmadeira.com/madeira-plans-study-for-megayacht-marina
   "49456", // https://www.timesofmadeira.com/immigrants-pay-five-times-more-social-security-than-they-claim
   "49695", // https://www.timesofmadeira.com/madeiras-debt-to-gdp-ratio-now-at-612
-  "49891", // https://www.timesofmadeira.com/santana-madeiras-most-affordable-housing-market-at-eur1792m2
-  "50065", // https://www.timesofmadeira.com/colossus-the-rise-and-fall-of-madeiras-hotel-atlantis
-  "50156", // https://www.timesofmadeira.com/joao-jardim-condemns-hiking-restrictions-for-residents
-  "50147", // https://www.timesofmadeira.com/madeira-home-prices-up-146-in-2025
-  "50175", // https://www.timesofmadeira.com/black-gold-black-friday-how-venezuelans-returned-to-madeira
-  "50254", // https://www.timesofmadeira.com/madeira-rent-levels-now-reach-porto-district
-  "50293", // https://www.timesofmadeira.com/the-two-paths-of-madeira-understanding-levadas-and-veredas
-  "50382", // https://www.timesofmadeira.com/madeira-cruise-tourism-brings-in-eur62-million-in-2025
-  "50369", // https://www.timesofmadeira.com/machico-and-santana-oppose-hiking-time-slots-for-residents
-  "49345", // https://www.timesofmadeira.com/from-jesuit-priests-to-malmsey-faja-dos-padres-400-year-legacy
-  "50679", // https://www.timesofmadeira.com/portugals-president-symbolic-figure-with-real-power
-  "50643", // https://www.timesofmadeira.com/siga-bus-network-explained-tickets-tips-and-fares-for-2026
-  "50820", // https://www.timesofmadeira.com/ponta-do-sol-announces-estrada-dos-anjos-project
-  "50930", // https://www.timesofmadeira.com/madeira-airports-see-174-rise-in-international-traffic-in-2025
-  "50969", // https://www.timesofmadeira.com/should-madeira-spread-tourism-beyond-crowded-hotspots
-  "51049", // https://www.timesofmadeira.com/ponta-do-sol-plans-to-reopen-lugar-de-baixo-marina
-  "53122", // https://www.timesofmadeira.com/power-without-expiry-psd-madeira-removes-term-limits
+  "49891",  // https://www.timesofmadeira.com/santana-madeiras-most-affordable-housing-market-at-eur1792m2
+  "50065",  // https://www.timesofmadeira.com/colossus-the-rise-and-fall-of-madeiras-hotel-atlantis
+  "50156",  // https://www.timesofmadeira.com/joao-jardim-condemns-hiking-restrictions-for-residents
+  "50147",  // https://www.timesofmadeira.com/madeira-home-prices-up-146-in-2025
+  "50175",  // https://www.timesofmadeira.com/black-gold-black-friday-how-venezuelans-returned-to-madeira
+  "50254",  // https://www.timesofmadeira.com/madeira-rent-levels-now-reach-porto-district
+  "50293",  // https://www.timesofmadeira.com/the-two-paths-of-madeira-understanding-levadas-and-veredas
+  "50382",  // https://www.timesofmadeira.com/madeira-cruise-tourism-brings-in-eur62-million-in-2025
+  "50369",  // https://www.timesofmadeira.com/machico-and-santana-oppose-hiking-time-slots-for-residents
+  "50382",  // https://www.timesofmadeira.com/madeira-cruise-tourism-brings-in-eur62-million-in-2025
+  "49345",  // https://www.timesofmadeira.com/from-jesuit-priests-to-malmsey-faja-dos-padres-400-year-legacy
+  "50679",  // https://www.timesofmadeira.com/portugals-president-symbolic-figure-with-real-power
+  "50382",  // https://www.timesofmadeira.com/fixed-speed-radars-coming-to-madeira-this-year
+  "50643",  // https://www.timesofmadeira.com/siga-bus-network-explained-tickets-tips-and-fares-for-2026
+  "50820",  // https://www.timesofmadeira.com/ponta-do-sol-announces-estrada-dos-anjos-project
+  "50930",  // https://www.timesofmadeira.com/madeira-airports-see-174-rise-in-international-traffic-in-2025
+  "50969",  // https://www.timesofmadeira.com/should-madeira-spread-tourism-beyond-crowded-hotspots
+  "51049",  // https://www.timesofmadeira.com/ponta-do-sol-plans-to-reopen-lugar-de-baixo-marina
+  "53122",  // https://www.timesofmadeira.com/power-without-expiry-psd-madeira-removes-term-limits
   "53316"  // https://www.timesofmadeira.com/madeira-housing-prices-fall-83-in-late-2025-despite-national-rise
 ])];
 
 const HYVOR_API_KEY = process.env.HYVOR_API_KEY;
-
 if (!HYVOR_API_KEY) {
-  console.error("❌ HYVOR_API_KEY env var missing.");
+  console.error("HYVOR_API_KEY env var missing. Set it before running.");
   process.exit(1);
 }
 
@@ -183,47 +183,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function safeFetch(url, options = {}) {
-  const res = await fetch(url, options);
-  const text = await res.text();
-
-  let data;
-  try {
-    data = JSON.parse(text);
-  } catch {
-    console.error("❌ Invalid JSON response:");
-    console.error(text);
-    throw new Error("Invalid JSON");
-  }
-
-  if (!res.ok) {
-    console.error("❌ API error:", data);
-    throw new Error(`HTTP ${res.status}`);
-  }
-
-  return data;
-}
-
-async function getFeaturedPosts() {
-  const url = `${API_BASE}/posts?is_featured=1`;
-  console.log("➡️ Fetching:", url);
-
-  const data = await safeFetch(url, {
-    headers: { "X-API-KEY": HYVOR_API_KEY }
-  });
-
-  if (!data || !Array.isArray(data.data)) {
-    console.error("❌ Unexpected API structure:");
-    console.dir(data, { depth: null });
-    return [];
-  }
-
-  return data.data.map(post => String(post.id));
-}
-
+// PATCH /post/{id}
 async function patchPost(id, body, attempt = 1) {
   const url = `${API_BASE}/post/${id}`;
-
   try {
     const res = await fetch(url, {
       method: "PATCH",
@@ -234,30 +196,31 @@ async function patchPost(id, body, attempt = 1) {
       body: JSON.stringify(body)
     });
 
-    const text = await res.text();
-
     if (res.status === 429) {
       const wait = Math.min(60000, 2000 * attempt);
-      console.warn(`⏳ 429 for ${id}, retrying in ${wait}ms`);
+      console.warn(`429 for ${id}. Backing off ${wait}ms (attempt ${attempt})`);
       await sleep(wait);
       return patchPost(id, body, attempt + 1);
     }
 
     if (!res.ok) {
-      console.error(`❌ PATCH failed for ${id}:`, text);
-      throw new Error(`HTTP ${res.status}`);
+      const text = await res.text();
+      throw new Error(`HTTP ${res.status} ${res.statusText}: ${text}`);
     }
 
-    return JSON.parse(text);
+    return await res.json();
   } catch (err) {
     if (attempt < 4) {
-      await sleep(1000 * attempt);
+      const wait = 1000 * attempt;
+      console.warn(`Error patching ${id}: ${err.message}. Retry in ${wait}ms`);
+      await sleep(wait);
       return patchPost(id, body, attempt + 1);
     }
     throw err;
   }
 }
 
+// Fisher–Yates shuffle
 function shuffleArray(array) {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -267,34 +230,45 @@ function shuffleArray(array) {
   return arr;
 }
 
+// Returns unique random elements using Fisher–Yates shuffle
 function getRandomElements(array, count) {
-  return shuffleArray(array).slice(0, count);
+  const shuffled = shuffleArray(array);
+  return shuffled.slice(0, count);
+}
+
+// Unfeature all posts currently featured
+async function unfeatureAll() {
+  console.log("Unfeaturing all currently featured posts...");
+  await Promise.all(
+    posts.map(id => patchPost(id, { is_featured: false }).catch(err => {
+      console.error(`Failed to unfeature post ${id}:`, err.message);
+    }))
+  );
 }
 
 async function main() {
+  // Randomly activate between 1 and 3 posts on each run
+  const countToActivate = Math.floor(Math.random() * 3) + 1;
+
   try {
-    console.log("🔍 Fetching currently featured posts...");
-    const currentlyFeatured = await getFeaturedPosts();
+    // Step 1: Unfeature all posts currently featured
+    await unfeatureAll();
+    console.log("Completed unfeaturing all posts.");
 
-    console.log(`📌 Found ${currentlyFeatured.length} featured posts`);
-
-    for (const id of currentlyFeatured) {
-      console.log(`➡️ Unfeaturing ${id}`);
-      await patchPost(id, { is_featured: false });
-    }
-
-    const countToActivate = Math.floor(Math.random() * 3) + 1;
+    // Step 2: Select random posts to feature
     const toFeature = getRandomElements(posts, countToActivate);
+    console.log(`Selected ${countToActivate} posts to feature:`, toFeature.join(", "));
 
-    console.log(`✨ Featuring ${countToActivate} posts:`, toFeature.join(", "));
+    // Step 3: Feature selected posts
+    await Promise.all(
+      toFeature.map(id => patchPost(id, { is_featured: true }).catch(err => {
+        console.error(`Failed to feature post ${id}:`, err.message);
+      }))
+    );
 
-    for (const id of toFeature) {
-      await patchPost(id, { is_featured: true });
-    }
-
-    console.log("✅ Done.");
+    console.log("Successfully featured posts:", toFeature.join(", "));
   } catch (err) {
-    console.error("💥 Fatal error:", err.message);
+    console.error("Fatal error:", err);
     process.exit(1);
   }
 }
