@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://www.timesofmadeira.com/44-of-all-2025-car-registrations-in-madeira-were-electrified</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-11T22:47:30Z</news:publication_date>
+      <news:title>44% of all 2025 Car Registrations in Madeira Were Electrified</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/car-rent.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.timesofmadeira.com/madeira-rents-rise-114-reaching-record-eur167m2</loc>
     <news:news>
       <news:publication>
