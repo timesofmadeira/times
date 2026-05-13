@@ -14,18 +14,4 @@
       <image:loc>https://www.timesofmadeira.com/media/car-rent.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/madeira-rents-rise-114-reaching-record-eur167m2</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-11T21:10:53Z</news:publication_date>
-      <news:title>Madeira Rents Rise 11.4%, Reaching Record €16.7/m²</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/house-madeira-arco.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
