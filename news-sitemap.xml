@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.timesofmadeira.com/5500-people-checked-on-madeira-hiking-trails-since-april</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Times of Madeira</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-05-14T22:04:06Z</news:publication_date>
+      <news:title>5,500 People Checked on Madeira Hiking Trails Since April</news:title>
+    </news:news>
+    <image:image>
+      <image:loc>https://www.timesofmadeira.com/media/sssssss.jpg</image:loc>
+    </image:image>
+  </url>
 </urlset>
