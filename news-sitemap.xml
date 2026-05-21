@@ -14,18 +14,4 @@
       <image:loc>https://www.timesofmadeira.com/media/justice-postit.webp</image:loc>
     </image:image>
   </url>
-  <url>
-    <loc>https://www.timesofmadeira.com/dw-video-covers-tourism-pressures-in-madeira</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Times of Madeira</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-05-19T15:41:35Z</news:publication_date>
-      <news:title>DW Video Covers Tourism Pressures in Madeira</news:title>
-    </news:news>
-    <image:image>
-      <image:loc>https://www.timesofmadeira.com/media/madeira-coast.webp</image:loc>
-    </image:image>
-  </url>
 </urlset>
