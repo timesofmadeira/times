@@ -66,7 +66,6 @@ const posts = [...new Set([
   "36153", // https://www.timesofmadeira.com/insights-on-madeiras-fast-paced-real-estate-market
   "36388", // https://www.timesofmadeira.com/portugal-offers-100-loan-financing-for-young-peoples-first-home
   "36151", // https://www.timesofmadeira.com/where-to-donate-clothes-in-funchal
-  "36754", // https://www.timesofmadeira.com/madeira-will-limit-access-to-popular-hiking-trails
   "37149", // https://www.timesofmadeira.com/how-the-indian-ambassador-snubbed-its-people-in-madeira
   "37067", // https://www.timesofmadeira.com/before-the-runway-how-seaplanes-brought-the-world-to-madeira
   "37137", // https://www.timesofmadeira.com/antonio-salazars-estado-novo
